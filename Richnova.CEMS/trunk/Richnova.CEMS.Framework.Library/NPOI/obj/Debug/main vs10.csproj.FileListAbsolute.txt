@@ -1,0 +1,5 @@
+C:\Users\Michael\Desktop\npoi-2.0.6RC1\solution\Lib\NPOI.XML
+C:\Users\Michael\Desktop\npoi-2.0.6RC1\solution\Lib\NPOI.dll
+C:\Users\Michael\Desktop\npoi-2.0.6RC1\solution\Lib\NPOI.pdb
+C:\Users\Michael\Desktop\npoi-2.0.6RC1\main\obj\Debug\NPOI.dll
+C:\Users\Michael\Desktop\npoi-2.0.6RC1\main\obj\Debug\NPOI.pdb

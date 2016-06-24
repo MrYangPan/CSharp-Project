@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+
+  <object singleton="false"
+        type="Richnova.CEMS.Application.Group.Areas.Basic.Controllers.BCAreaManagementApiController,Richnova.CEMS.Application.Group">
+    <property name="BCAreaManagementService" ref="BCAreaManagementService"/>
+  </object>
+
+  <object singleton="false"
+      type="Richnova.CEMS.Application.Group.Areas.Basic.Controllers.BCIndustryManagementApiController,Richnova.CEMS.Application.Group">
+    <property name="BCIndustryManagementService" ref="BCIndustryManagementService"/>
+  </object>
+</objects>

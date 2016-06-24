@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+
+  <object id="LoginService" type="Richnova.CEMS.Service.Auth.LoginService,Richnova.CEMS.Service.Auth">
+    <property name="Repository" ref="App.Repository"/>
+  </object>
+
+  <object id="MenuService" type="Richnova.CEMS.Service.Auth.MenuService,Richnova.CEMS.Service.Auth">
+    <property name="Repository" ref="App.Repository"/>
+  </object>
+  
+<object id="UserService" type="Richnova.CEMS.Service.Auth.UserService,Richnova.CEMS.Service.Auth">
+    <property name="Repository" ref="App.Repository"/>
+  </object>
+
+<object id="RoleService" type="Richnova.CEMS.Service.Auth.RoleService,Richnova.CEMS.Service.Auth">
+    <property name="Repository" ref="App.Repository"/>
+  </object>
+
+</objects>

@@ -1,0 +1,51 @@
+﻿<!doctype html>
+<html>
+<head>
+    <!--[if lt IE 7]><script type="text/javascript" src="~/Statics/Scripts/common/IE7.js"></script><![endif]-->
+    <title>CEMS-登录</title>
+    @Styles.Render("~/Statics/Styles/login");
+    
+    @Scripts.Render("~/Statics/Scripts/jquery/js")
+    @Scripts.Render("~/Statics/Scripts/common/json2")
+    @Scripts.Render("~/Statics/Scripts/knockout/js")
+    @Scripts.Render("~/Statics/Scripts/lang/cn")
+    @Scripts.Render("~/ViewJs/login.js")
+</head>
+    <body>
+        <noscript>
+            <div class="noscript">
+                <img src="~/Statics/Images/noscript.gif" alt="脚本不支持！" />
+            </div>
+        </noscript>
+
+        <div class="second_body">
+            <form data-bind="submit:loginClick">
+                <div class="logo"><img src="~/Statics/Images/login/logo.png" alt="" /></div>
+                <div class="title-zh">能源持续检测管理系统</div>
+                <div class="title-en">Continuous Energy Monitoring System </div>
+                <div class="message" data-bind="html:message"></div>
+                <table style="width:300px;">
+                    <tr>
+                        <td style="padding-bottom: 5px;width:55px;">用户：</td>
+                        <td colspan="2"><input type="text" class="login" data-bind="value: form.usercode" /></td>
+                    </tr>
+                    <tr>
+                        <td style="padding-bottom: 5px;width:55px;">密码：</td>
+                        <td colspan="2"><input type="password" class="login" data-bind="value:form.password" /></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="2"><input type="checkbox" data-bind="checked:form.remember" /><span>记住我</span></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="2" style="text-align:left">
+                            <input type="submit" value="登录" class="login_button" />
+                            <input type="button" value="重置" class="reset_botton" data-bind="click:resetClick" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </body>
+</html>

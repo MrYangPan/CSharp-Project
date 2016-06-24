@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!--[if lt IE 7]><script type="text/javascript" src="~/Scripts/Common/IE7.js"></script><![endif]-->
+    <title>CEMS</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="~/Content/themes/icon.css" rel="stylesheet" />
+    @*        <link href="~/Scripts/uploadify/uploadify.css" rel="stylesheet" />*@
+    <link href="~/Scripts/jquery-plugins/fineuploader-3.7.1/fineuploader-3.7.1.min.css" rel="stylesheet" />
+    <link href="~/Content/themes/@LoginHelper.GetUserSettiings().Theme/easyui.css" rel="stylesheet" />
+    <link href="~/Content/@LoginHelper.GetUserSettiings().Theme-site.css" rel="stylesheet" />
+    <!--加载页面脚本-->
+    <script src="~/Scripts/Common/utils.js"></script>
+    <script src="~/Scripts/Common/formater.js"></script>
+    <script src="~/Scripts/jquery/jquery.min.js"></script>
+    @*        <script src="~/Scripts/uploadify/jquery.uploadify.min.js"></script>*@
+    <script src="~/Scripts/jquery-plugins/fineuploader-3.7.1/jquery.fineuploader-3.7.1.min.js"></script>
+    @*        <script src="~/Scripts/EasyUI/locale/easyui-lang-@(Thread.CurrentThread.CurrentCulture.Name).js"></script>*@
+    <script src="~/Scripts/easyUI/jquery.easyui.min.js"></script>
+    <script src="~/Scripts/easyui/locale/easyui-lang-zh_CN.js"></script>
+    <script src="~/Scripts/easyui/jquery.form.json.js"></script>
+    <script src="~/Scripts/lang/app-lang-zh-CN.js"></script>
+    <script src="~/Scripts/view/index.js"></script>
+    <script src="~/Scripts/easyui/extension/combox-addnew.js"></script>
+</head>
+<body class="easyui-layout" style="visibility: hidden">
+    <noscript>
+        <div class="noscript">
+            <img src="~/Images/noscript.gif" alt="@Resource.Index.Warning_NoScript" />
+        </div>
+    </noscript>
+    @Html.Partial("_LayoutPartial")
+    <div id="closeMenu" class="easyui-menu hide" style="width:150px;">
+        <div id="refresh">@Resource.Index.TabMenu_Refresh</div>
+        <div class="menu-sep"></div>
+        <div id="close">@Resource.Index.TabMenu_Close</div>
+        <div id="closeall">@Resource.Index.TabMenu_CloseAll</div>
+        <div id="closeother">@Resource.Index.TabMenu_CloseExceptThis</div>
+        <div class="menu-sep"></div>
+        <div id="closeright">@Resource.Index.TabMenu_CloseRight</div>
+        <div id="closeleft">@Resource.Index.TabMenu_CloseLeft</div>
+        <div class="menu-sep"></div>
+        <div id="exit">@Resource.Index.TabMenu_Exit</div>
+    </div>
+    <div id="closeMenu" class="easyui-menu hidden" style="width:150px;">
+        <div id="close">关闭</div>
+        <div id="closeall">全部关闭</div>
+        <div id="closeother">除此之外全部关闭</div>
+        <div class="menu-sep"></div>
+        <div id="closeright">关闭右侧标签</div>
+        <div id="closeleft">关闭左侧标签</div>
+        <div class="menu-sep"></div>
+        <div id="exit">退出</div>
+    </div>
+    <div id="w"></div>
+    <div id="notity"></div>
+    <script type="text/javascript">
+            $(function () {
+                $('body').css('visibility', 'visible');
+                wrapper.init(@Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model)));
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+﻿<script type="text/javascript">
+    $(function () {
+        area.dialogOpen(area.editRow);
+    });
+</script>
+<div id="area-dlg" style="width: 600px; height: 420px; position: relative">
+    <form id="area-form" class="easyui-form" style="padding: 20px;">
+        <input name="Id" type="hidden" />
+        <input name="AreaLevel" type="hidden" />
+        <input name="Version" type="hidden" />
+        <div class="view-title">@Lang.Common.Form_Detail</div>
+        <table id="area-edit" class="edit-table column2">
+            <tr>
+                <th>地区名称:</th>
+                <td>
+                    <input name="AreaName" class="easyui-validatebox" data-options="required:true" /></td>
+            </tr>
+            <tr>
+                <th>所属地区名称:</th>
+                <td>
+                    <input name="ParentId" id="ParentId" class="easyui-combotree" /></td>
+            </tr>
+            <tr>
+                <th>备注:</th>
+                <td>
+                    <textarea name="AreaDesc" class="textarea1"></textarea>
+                </td>
+            </tr>
+        </table>
+
+        <div class="view-title">@Lang.Common.Form_Additional</div>
+        <table class="view-table">
+            <tr>
+                <th>创建日期:</th>
+                <td>
+                    <input name="CreatedAt" readonly="readonly" /></td>
+                <th>创建人:</th>
+                <td>
+                    <input name="CreatedBy" readonly="readonly" /></td>
+            </tr>
+            <tr>
+                <th>修改日期:</th>
+                <td>
+                    <input name="UpdatedAt" readonly="readonly" /></td>
+                <th>修改人:</th>
+                <td>
+                    <input name="UpdatedBy" readonly="readonly"></td>
+            </tr>
+        </table>
+    </form>
+</div>

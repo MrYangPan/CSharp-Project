@@ -1,0 +1,590 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A7FF13BB-AEF3-4442-B026-B2DB8BCC8A79}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Richnova.CEMS.Application.Group</RootNamespace>
+    <AssemblyName>Richnova.CEMS.Application.Group</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Web.Mvc5">
+      <HintPath>..\..\lib\Spring.Net2.0\Net40\Spring.Web.Mvc5.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.0\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Tracing">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Tracing.5.2.0\lib\net45\System.Web.Http.Tracing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Areas\Basis\Controllers\" />
+    <Folder Include="Areas\Basis\Models\" />
+    <Folder Include="Areas\Basis\Views\Shared\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\LanguageLoader.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Auth\AuthAreaRegistration.cs" />
+    <Compile Include="Areas\Auth\Controllers\AuthController.cs" />
+    <Compile Include="Areas\Auth\Controllers\MenuApiController.cs" />
+    <Compile Include="Areas\Auth\Controllers\RoleApiController.cs" />
+    <Compile Include="Areas\Auth\Controllers\UserApiController.cs" />
+    <Compile Include="Areas\Basic\Controllers\BCAreaManagementApiController.cs" />
+    <Compile Include="Areas\Basic\Controllers\BCAreaManagementController.cs" />
+    <Compile Include="Areas\Basic\Controllers\BCIndustryManagementApiController.cs" />
+    <Compile Include="Areas\Basic\Controllers\BCIndustryManagementController.cs" />
+    <Compile Include="Areas\Basis\BasisAreaRegistration.cs" />
+    <Compile Include="Areas\Basic\AuthAreaRegistration.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LocalController.cs" />
+    <Compile Include="Controllers\LoginApiController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Config\Spring.cfg.xml" />
+    <EmbeddedResource Include="Config\Spring.data.xml" />
+    <EmbeddedResource Include="Controllers\spring-controller.xml" />
+    <EmbeddedResource Include="Areas\Auth\spring-controller.xml" />
+    <EmbeddedResource Include="Areas\Basis\spring-controller.xml" />
+    <Content Include="Areas\Auth\Models\menu.js" />
+    <Content Include="Areas\Auth\Models\role.js" />
+    <Content Include="Areas\Auth\Models\user.js" />
+    <EmbeddedResource Include="Areas\Basic\spring-controller.xml" />
+    <Content Include="Areas\Basic\Models\BCAreaManagement.js" />
+    <Content Include="Areas\Basic\Models\BCIndustryManagement.js" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\Basic\Views\BCIndustryManagement\Index.cshtml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Statics\Images\login\login1.jpg" />
+    <Content Include="Statics\Images\login\login_bg.jpg" />
+    <Content Include="Statics\Images\login\login_panel.png" />
+    <Content Include="Statics\Images\login\logo.png" />
+    <Content Include="Statics\Images\login\reset.jpg" />
+    <Content Include="Statics\Images\logo.png" />
+    <Content Include="Statics\Images\noscript.gif" />
+    <Content Include="Statics\Scripts\bootstrap\bootstrap-theme.css" />
+    <Content Include="Statics\Scripts\bootstrap\bootstrap-theme.min.css" />
+    <Content Include="Statics\Scripts\bootstrap\bootstrap.css" />
+    <Content Include="Statics\Scripts\bootstrap\bootstrap.js" />
+    <Content Include="Statics\Scripts\bootstrap\bootstrap.min.css" />
+    <Content Include="Statics\Scripts\bootstrap\bootstrap.min.js" />
+    <Content Include="Statics\Scripts\common\IE7.js" />
+    <Content Include="Statics\Scripts\common\IE9.js" />
+    <Content Include="Statics\Scripts\common\json2.js" />
+    <Content Include="Statics\Scripts\common\utils.js" />
+    <Content Include="Statics\Scripts\easyui\easyloader.js" />
+    <Content Include="Statics\Scripts\easyui\easyui-lang-en_US.js" />
+    <Content Include="Statics\Scripts\easyui\easyui-lang-zh_CN.js" />
+    <Content Include="Statics\Scripts\easyui\easyui-lang-zh_TW.js" />
+    <Content Include="Statics\Scripts\easyui\jquery.easyui.min.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.accordion.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.calendar.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.combo.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.combobox.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.combogrid.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.combotree.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.datagrid.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.datebox.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.datetimebox.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.datetimespinner.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.dialog.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.draggable.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.droppable.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.filebox.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.form.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.layout.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.linkbutton.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.menu.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.menubutton.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.messager.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.numberbox.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.numberspinner.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.pagination.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.panel.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.parser.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.progressbar.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.propertygrid.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.resizable.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.searchbox.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.slider.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.spinner.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.splitbutton.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.tabs.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.textbox.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.timespinner.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.tooltip.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.tree.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.treegrid.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.validatebox.js" />
+    <Content Include="Statics\Scripts\easyui\plugins\jquery.window.js" />
+    <Content Include="Statics\Styles\themes\color.css" />
+    <Content Include="Statics\Styles\themes\default\accordion.css" />
+    <Content Include="Statics\Styles\themes\default\calendar.css" />
+    <Content Include="Statics\Styles\themes\default\combo.css" />
+    <Content Include="Statics\Styles\themes\default\combobox.css" />
+    <Content Include="Statics\Styles\themes\default\datagrid.css" />
+    <Content Include="Statics\Styles\themes\default\datebox.css" />
+    <Content Include="Statics\Styles\themes\default\dialog.css" />
+    <Content Include="Statics\Styles\themes\default\easyui.css" />
+    <Content Include="Statics\Styles\themes\default\filebox.css" />
+    <Content Include="Statics\Styles\themes\default\images\accordion_arrows.png" />
+    <Content Include="Statics\Styles\themes\default\images\blank.gif" />
+    <Content Include="Statics\Styles\themes\default\images\calendar_arrows.png" />
+    <Content Include="Statics\Styles\themes\default\images\combo_arrow.png" />
+    <Content Include="Statics\Styles\themes\default\images\datagrid_icons.png" />
+    <Content Include="Statics\Styles\themes\default\images\datebox_arrow.png" />
+    <Content Include="Statics\Styles\themes\default\images\layout_arrows.png" />
+    <Content Include="Statics\Styles\themes\default\images\linkbutton_bg.png" />
+    <Content Include="Statics\Styles\themes\default\images\loading.gif" />
+    <Content Include="Statics\Styles\themes\default\images\menu_arrows.png" />
+    <Content Include="Statics\Styles\themes\default\images\messager_icons.png" />
+    <Content Include="Statics\Styles\themes\default\images\pagination_icons.png" />
+    <Content Include="Statics\Styles\themes\default\images\panel_tools.png" />
+    <Content Include="Statics\Styles\themes\default\images\searchbox_button.png" />
+    <Content Include="Statics\Styles\themes\default\images\slider_handle.png" />
+    <Content Include="Statics\Styles\themes\default\images\spinner_arrows.png" />
+    <Content Include="Statics\Styles\themes\default\images\tabs_icons.png" />
+    <Content Include="Statics\Styles\themes\default\images\tree_icons.png" />
+    <Content Include="Statics\Styles\themes\default\images\validatebox_warning.png" />
+    <Content Include="Statics\Styles\themes\default\layout.css" />
+    <Content Include="Statics\Styles\themes\default\linkbutton.css" />
+    <Content Include="Statics\Styles\themes\default\menu.css" />
+    <Content Include="Statics\Styles\themes\default\menubutton.css" />
+    <Content Include="Statics\Styles\themes\default\messager.css" />
+    <Content Include="Statics\Styles\themes\default\numberbox.css" />
+    <Content Include="Statics\Styles\themes\default\pagination.css" />
+    <Content Include="Statics\Styles\themes\default\panel.css" />
+    <Content Include="Statics\Styles\themes\default\progressbar.css" />
+    <Content Include="Statics\Styles\themes\default\propertygrid.css" />
+    <Content Include="Statics\Styles\themes\default\searchbox.css" />
+    <Content Include="Statics\Styles\themes\default\slider.css" />
+    <Content Include="Statics\Styles\themes\default\spinner.css" />
+    <Content Include="Statics\Styles\themes\default\splitbutton.css" />
+    <Content Include="Statics\Styles\themes\default\tabs.css" />
+    <Content Include="Statics\Styles\themes\default\textbox.css" />
+    <Content Include="Statics\Styles\themes\default\tooltip.css" />
+    <Content Include="Statics\Styles\themes\default\tree.css" />
+    <Content Include="Statics\Styles\themes\default\validatebox.css" />
+    <Content Include="Statics\Styles\themes\default\window.css" />
+    <Content Include="Statics\Styles\themes\icon.css" />
+    <Content Include="Statics\Styles\themes\icons\accept.png" />
+    <Content Include="Statics\Styles\themes\icons\account.png" />
+    <Content Include="Statics\Styles\themes\icons\add.png" />
+    <Content Include="Statics\Styles\themes\icons\Allocate.png" />
+    <Content Include="Statics\Styles\themes\icons\Amend.png" />
+    <Content Include="Statics\Styles\themes\icons\Apply.png" />
+    <Content Include="Statics\Styles\themes\icons\area.png" />
+    <Content Include="Statics\Styles\themes\icons\ArrowBack.png" />
+    <Content Include="Statics\Styles\themes\icons\ArrowDown.png" />
+    <Content Include="Statics\Styles\themes\icons\ArrowForward.png" />
+    <Content Include="Statics\Styles\themes\icons\ArrowUp.png" />
+    <Content Include="Statics\Styles\themes\icons\Attach.png" />
+    <Content Include="Statics\Styles\themes\icons\back.png" />
+    <Content Include="Statics\Styles\themes\icons\bank.png" />
+    <Content Include="Statics\Styles\themes\icons\blank.gif" />
+    <Content Include="Statics\Styles\themes\icons\Calendar.png" />
+    <Content Include="Statics\Styles\themes\icons\cancel.png" />
+    <Content Include="Statics\Styles\themes\icons\Chart3D.png" />
+    <Content Include="Statics\Styles\themes\icons\clear.png" />
+    <Content Include="Statics\Styles\themes\icons\Close.png" />
+    <Content Include="Statics\Styles\themes\icons\CloseDetail.png" />
+    <Content Include="Statics\Styles\themes\icons\Comment.png" />
+    <Content Include="Statics\Styles\themes\icons\contract.png" />
+    <Content Include="Statics\Styles\themes\icons\create.png" />
+    <Content Include="Statics\Styles\themes\icons\Curve.png" />
+    <Content Include="Statics\Styles\themes\icons\customer.png" />
+    <Content Include="Statics\Styles\themes\icons\cut.png" />
+    <Content Include="Statics\Styles\themes\icons\delete.png" />
+    <Content Include="Statics\Styles\themes\icons\dictionary.png" />
+    <Content Include="Statics\Styles\themes\icons\Dropper.png" />
+    <Content Include="Statics\Styles\themes\icons\edit_add.png" />
+    <Content Include="Statics\Styles\themes\icons\edit_remove.png" />
+    <Content Include="Statics\Styles\themes\icons\employee.png" />
+    <Content Include="Statics\Styles\themes\icons\en-us.ico" />
+    <Content Include="Statics\Styles\themes\icons\Export.png" />
+    <Content Include="Statics\Styles\themes\icons\ExportToExcel.png" />
+    <Content Include="Statics\Styles\themes\icons\ExportToHTML.png" />
+    <Content Include="Statics\Styles\themes\icons\ExportToIMG.png" />
+    <Content Include="Statics\Styles\themes\icons\ExportToMHT.png" />
+    <Content Include="Statics\Styles\themes\icons\ExportToPDF.png" />
+    <Content Include="Statics\Styles\themes\icons\ExportToRTF.png" />
+    <Content Include="Statics\Styles\themes\icons\ExportToTXT.png" />
+    <Content Include="Statics\Styles\themes\icons\ExportToXML.png" />
+    <Content Include="Statics\Styles\themes\icons\filesave.png" />
+    <Content Include="Statics\Styles\themes\icons\filter.png" />
+    <Content Include="Statics\Styles\themes\icons\finance.png" />
+    <Content Include="Statics\Styles\themes\icons\Fund.png" />
+    <Content Include="Statics\Styles\themes\icons\futures.png" />
+    <Content Include="Statics\Styles\themes\icons\hedge.png" />
+    <Content Include="Statics\Styles\themes\icons\help.png" />
+    <Content Include="Statics\Styles\themes\icons\Hint.png" />
+    <Content Include="Statics\Styles\themes\icons\Import.png" />
+    <Content Include="Statics\Styles\themes\icons\Info.png" />
+    <Content Include="Statics\Styles\themes\icons\Invoice.png" />
+    <Content Include="Statics\Styles\themes\icons\large_chart.png" />
+    <Content Include="Statics\Styles\themes\icons\large_clipart.png" />
+    <Content Include="Statics\Styles\themes\icons\large_picture.png" />
+    <Content Include="Statics\Styles\themes\icons\large_shapes.png" />
+    <Content Include="Statics\Styles\themes\icons\large_smartart.png" />
+    <Content Include="Statics\Styles\themes\icons\LayoutFlip.png" />
+    <Content Include="Statics\Styles\themes\icons\lc.png" />
+    <Content Include="Statics\Styles\themes\icons\lock.png" />
+    <Content Include="Statics\Styles\themes\icons\man.png" />
+    <Content Include="Statics\Styles\themes\icons\mini_add.png" />
+    <Content Include="Statics\Styles\themes\icons\mini_edit.png" />
+    <Content Include="Statics\Styles\themes\icons\mini_refresh.png" />
+    <Content Include="Statics\Styles\themes\icons\Navigation.png" />
+    <Content Include="Statics\Styles\themes\icons\no.png" />
+    <Content Include="Statics\Styles\themes\icons\ok.png" />
+    <Content Include="Statics\Styles\themes\icons\pencil.png" />
+    <Content Include="Statics\Styles\themes\icons\permission.png" />
+    <Content Include="Statics\Styles\themes\icons\position.png" />
+    <Content Include="Statics\Styles\themes\icons\Preview.png" />
+    <Content Include="Statics\Styles\themes\icons\pricing.png" />
+    <Content Include="Statics\Styles\themes\icons\print.png" />
+    <Content Include="Statics\Styles\themes\icons\reconciliation.png" />
+    <Content Include="Statics\Styles\themes\icons\redo.png" />
+    <Content Include="Statics\Styles\themes\icons\reload.png" />
+    <Content Include="Statics\Styles\themes\icons\Reminder.png" />
+    <Content Include="Statics\Styles\themes\icons\remove.png" />
+    <Content Include="Statics\Styles\themes\icons\Report.png" />
+    <Content Include="Statics\Styles\themes\icons\SaveAndClose.png" />
+    <Content Include="Statics\Styles\themes\icons\screen_actual.gif" />
+    <Content Include="Statics\Styles\themes\icons\screen_full.gif" />
+    <Content Include="Statics\Styles\themes\icons\search.png" />
+    <Content Include="Statics\Styles\themes\icons\Settle.png" />
+    <Content Include="Statics\Styles\themes\icons\setup.png" />
+    <Content Include="Statics\Styles\themes\icons\Split.png" />
+    <Content Include="Statics\Styles\themes\icons\Start.png" />
+    <Content Include="Statics\Styles\themes\icons\storage.png" />
+    <Content Include="Statics\Styles\themes\icons\sum.png" />
+    <Content Include="Statics\Styles\themes\icons\system.png" />
+    <Content Include="Statics\Styles\themes\icons\tip.png" />
+    <Content Include="Statics\Styles\themes\icons\trace.png" />
+    <Content Include="Statics\Styles\themes\icons\Track.png" />
+    <Content Include="Statics\Styles\themes\icons\trade.png" />
+    <Content Include="Statics\Styles\themes\icons\undo.png" />
+    <Content Include="Statics\Scripts\highcharts\adapters\standalone-framework.js" />
+    <Content Include="Statics\Scripts\highcharts\adapters\standalone-framework.src.js" />
+    <Content Include="Statics\Scripts\highcharts\highcharts-3d.js" />
+    <Content Include="Statics\Scripts\highcharts\highcharts-3d.src.js" />
+    <Content Include="Statics\Scripts\highcharts\highcharts-all.js" />
+    <Content Include="Statics\Scripts\highcharts\highcharts-more.js" />
+    <Content Include="Statics\Scripts\highcharts\highcharts-more.src.js" />
+    <Content Include="Statics\Scripts\highcharts\highcharts.js" />
+    <Content Include="Statics\Scripts\highcharts\highcharts.src.js" />
+    <Content Include="Statics\Scripts\highcharts\modules\canvas-tools.js" />
+    <Content Include="Statics\Scripts\highcharts\modules\canvas-tools.src.js" />
+    <Content Include="Statics\Scripts\highcharts\modules\data.js" />
+    <Content Include="Statics\Scripts\highcharts\modules\data.src.js" />
+    <Content Include="Statics\Scripts\highcharts\modules\drilldown.js" />
+    <Content Include="Statics\Scripts\highcharts\modules\drilldown.src.js" />
+    <Content Include="Statics\Scripts\highcharts\modules\exporting.js" />
+    <Content Include="Statics\Scripts\highcharts\modules\exporting.src.js" />
+    <Content Include="Statics\Scripts\highcharts\modules\funnel.js" />
+    <Content Include="Statics\Scripts\highcharts\modules\funnel.src.js" />
+    <Content Include="Statics\Scripts\highcharts\modules\heatmap.js" />
+    <Content Include="Statics\Scripts\highcharts\modules\heatmap.src.js" />
+    <Content Include="Statics\Scripts\highcharts\modules\no-data-to-display.js" />
+    <Content Include="Statics\Scripts\highcharts\modules\no-data-to-display.src.js" />
+    <Content Include="Statics\Scripts\highcharts\modules\solid-gauge.js" />
+    <Content Include="Statics\Scripts\highcharts\modules\solid-gauge.src.js" />
+    <Content Include="Statics\Scripts\highcharts\themes\dark-blue.js" />
+    <Content Include="Statics\Scripts\highcharts\themes\dark-green.js" />
+    <Content Include="Statics\Scripts\highcharts\themes\dark-unica.js" />
+    <Content Include="Statics\Scripts\highcharts\themes\gray.js" />
+    <Content Include="Statics\Scripts\highcharts\themes\grid-light.js" />
+    <Content Include="Statics\Scripts\highcharts\themes\grid.js" />
+    <Content Include="Statics\Scripts\highcharts\themes\sand-signika.js" />
+    <Content Include="Statics\Scripts\highcharts\themes\skies.js" />
+    <Content Include="Statics\Scripts\jquery\jquery-1.11.1.js" />
+    <Content Include="Statics\Scripts\jquery\jquery-1.11.1.min.js" />
+    <Content Include="Statics\Scripts\knockout\knockout-3.1.0.js" />
+    <Content Include="Statics\Scripts\lang\app-lang-zh_CN.js" />
+    <Content Include="Statics\Scripts\respond\respond.js" />
+    <Content Include="Statics\Scripts\respond\respond.min.js" />
+    <Content Include="Statics\Styles\login.css" />
+    <Content Include="Statics\Styles\Site.css" />
+    <Content Include="Statics\Styles\themes\icons\usergo.png" />
+    <Content Include="Statics\Styles\themes\icons\VirtualStorage.png" />
+    <Content Include="Statics\Styles\themes\icons\zh-cn.ico" />
+    <Content Include="ViewJs\index.js" />
+    <Content Include="ViewJs\login.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml">
+      <SubType>
+      </SubType>
+    </Content>
+    <Content Include="Views\Home\Index.cshtml">
+      <SubType>
+      </SubType>
+    </Content>
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Richnova.CEMS.Application.Lang\Richnova.CEMS.Application.Lang.csproj">
+      <Project>{4c40ecd4-6433-4b62-b0e0-908417531f2e}</Project>
+      <Name>Richnova.CEMS.Application.Lang</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Richnova.CEMS.Entity.Auth\Richnova.CEMS.Entity.Auth.csproj">
+      <Project>{7414AC09-EC2F-45DB-A39E-A50EF7FBEC1E}</Project>
+      <Name>Richnova.CEMS.Entity.Auth</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Richnova.CEMS.Entity.Basic\Richnova.CEMS.Entity.Basic.csproj">
+      <Project>{00eb94d0-09f9-45ac-a2b0-f6da0d860331}</Project>
+      <Name>Richnova.CEMS.Entity.Basic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Richnova.CEMS.Entity.Basis\Richnova.CEMS.Entity.Basis.csproj">
+      <Project>{5AAAE30D-AF45-4ECE-A099-4FBDDB590484}</Project>
+      <Name>Richnova.CEMS.Entity.Basis</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Richnova.CEMS.Framework.Data\Richnova.CEMS.Framework.Data.csproj">
+      <Project>{3FF7F5DA-DE89-443D-A4FC-FD9D833ABF41}</Project>
+      <Name>Richnova.CEMS.Framework.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Richnova.CEMS.Framework.Web\Richnova.CEMS.Framework.Web.csproj">
+      <Project>{50A059E7-2D62-4CC6-86AC-8D3E8B9F08F9}</Project>
+      <Name>Richnova.CEMS.Framework.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Richnova.CEMS.Service.Auth\Richnova.CEMS.Service.Auth.csproj">
+      <Project>{18EF999C-F852-45A7-8530-5F7503C1FBFD}</Project>
+      <Name>Richnova.CEMS.Service.Auth</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Richnova.CEMS.Service.Basic\Richnova.CEMS.Service.Basic.csproj">
+      <Project>{60949298-5353-440b-9ba3-13cd45efe220}</Project>
+      <Name>Richnova.CEMS.Service.Basic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Richnova.CEMS.Service.Basis\Richnova.CEMS.Service.Basis.csproj">
+      <Project>{B752B43F-8207-4D6B-A356-B3E0F0E4EB5A}</Project>
+      <Name>Richnova.CEMS.Service.Basis</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="Statics\Scripts\bootstrap\bootstrap-theme.css.map" />
+    <Content Include="Statics\Scripts\bootstrap\bootstrap.css.map" />
+    <Content Include="Views\Home\_LayoutPartial.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Auth\Views\web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Basis\Views\web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Auth\Views\Auth\Authorization.cshtml" />
+    <Content Include="Areas\Auth\Views\Auth\Button.cshtml" />
+    <Content Include="Areas\Auth\Views\Auth\DataRule.cshtml" />
+    <Content Include="Areas\Auth\Views\Auth\Menu.cshtml" />
+    <Content Include="Areas\Auth\Views\Auth\Resource.cshtml" />
+    <Content Include="Areas\Auth\Views\Auth\Role.cshtml" />
+    <Content Include="Areas\Auth\Views\Auth\User.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Auth\Views\Auth\MenuEdit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\_MenuAccordion.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\_MenuTree.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\_MenuButton.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Basic\Views\web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Basic\Views\BCAreaManagement\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Basic\Views\BCAreaManagement\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>45734</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:45734/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

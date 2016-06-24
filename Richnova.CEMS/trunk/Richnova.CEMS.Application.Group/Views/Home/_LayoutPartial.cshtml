@@ -1,0 +1,42 @@
+﻿@using Richnova.CEMS.Framework.Web.Authentication
+@if (LoginHelper.GetSettiings().Navigation == "menubutton")
+{
+    @Html.Partial("_MenuButton")
+}
+else if (LoginHelper.GetSettiings().Navigation == "accordion")
+{
+    @Html.Partial("_MenuAccordion")
+}
+else
+{
+    @Html.Partial("_MenuTree")
+}
+
+<div region="south" data-options="split:false,border:false" class="app-foot">
+    <span style="color:#ffffff;font-size: 12px;margin: auto"></span>
+</div>
+
+<div region="center" style="overflow: hidden;">
+    <div id="center-tabs" class="easyui-tabs" data-options="fit:true,border:false,plain:false">
+        <div title="我的桌面" href="" name="main" />
+    </div>
+</div>
+
+<script type="text/html" id="password-template">
+    <div class="container_12" style="width:90%;margin:5%;">
+        <div class="grid_3 lbl">@Lang.Common.Login_User：</div>
+        <div class="grid_9 val"><input type="text" class="z-txt readonly " name="UserCode" value="@LoginHelper.GetCurrentUser().User" disabled="disabled" /></div>
+        <div class="grid_3 lbl">@Lang.Common.Password_Old：</div>
+        <div class="grid_9 val"><input type="password" class="z-txt" name="PasswordOld" /></div>
+        <div class="grid_3 lbl">@Lang.Common.Password_New：</div>
+        <div class="grid_9 val"><input type="password" class="z-txt" name="PasswordNew1" /></div>
+        <div class="grid_3 lbl">@Lang.Common.Btn_OK：</div>
+        <div class="grid_9 val"><input type="password" class="z-txt" name="PasswordNew2" /></div>
+        <div class="clear"></div>
+    </div>
+
+    <div style="text-align:center;" class="z-toolbar-dialog">
+        <a class="easyui-linkbutton" data-options="iconCls:'icon-ok'" href="javascript:void(0)" id="pwd_confirm">@Lang.Common.Btn_OK</a>
+        <a class="easyui-linkbutton" data-options="iconCls:'icon-cancel'" href="javascript:void(0)" id="pwd_close">@Lang.Common.Btn_Cancel</a>
+    </div>
+</script>

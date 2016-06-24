@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>&nbsp;</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--[if lt IE 7]><script type="text/javascript" src="~/Statics/Scripts/Common/IE7.js"></script><![endif]-->
+    @Styles.Render("~/Statics/Styles/themes/default/css");
+    @Styles.Render("~/Statics/Styles/themes/icon");
+    @Styles.Render("~/Statics/Styles/site");
+    
+    @Scripts.Render("~/Statics/Scripts/jquery/js");
+    @Scripts.Render("~/Statics/Scripts/easyui/jquery.easyui.min.js");
+    @Scripts.Render("~/Statics/Scripts/easyui/cn");
+    @Scripts.Render("~/Statics/Scripts/highcharts/js");
+    @Scripts.Render("~/Statics/Scripts/lang/cn");
+    @Scripts.Render("~/Statics/Scripts/common/utils");    
+    @Scripts.Render("~/ViewJs/index.js")
+    
+    <script type="text/javascript">
+    $(function () {
+        $('body').css('visibility', 'visible');
+        wrapper.init(@Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model)));
+    });
+    </script>
+
+</head>
+    <body class="easyui-layout" style="visibility: hidden">
+        <noscript>
+            <div class="noscript">
+                <img src="~/Statics/Images/noscript.gif" alt="脚本不支持！" />
+            </div>
+        </noscript>
+        @Html.Partial("_LayoutPartial")
+        <div id="closeMenu" class="easyui-menu hidden" style="width:150px;">
+            <div id="close">关闭</div>
+            <div id="closeall">全部关闭</div>
+            <div id="closeother">除此之外全部关闭</div>
+            <div class="menu-sep"></div>
+            <div id="closeright">关闭右侧标签</div>
+            <div id="closeleft">关闭左侧标签</div>
+            <div class="menu-sep"></div>
+            <div id="exit">退出</div>
+        </div>
+        <div id="w"></div>
+        <div id="notity"></div>
+    </body>
+</html>

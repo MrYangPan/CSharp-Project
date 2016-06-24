@@ -1,0 +1,20 @@
+﻿<div region="north" data-options="split:false,border:false,height:52" class="app-title">
+    <div class="head head-left">
+        <img alt="" src="~/Statics/Images/logo.png" />
+        <span id="title">CEMS</span>
+    </div>
+    <div class="head head-right">
+        <a href="javascript:void(0)" class="easyui-menubutton" data-options="menu:'#mm_user',iconCls:'icon-user'">当前用户：<label id="login-user"></label></a>
+        <div id="mm_user" style="width:200px;">
+            <div data-options="iconCls:'icon-rainbow'" class="myconfig">@Lang.Common.Login_MySettings</div>
+            <div data-options="iconCls:'icon-pwd'" class="changepwd">@Lang.Common.Password_Change</div>
+            <div class="menu-sep"></div>
+            <div data-options="iconCls:'icon-usergo'" class="loginOut">@Lang.Common.Login_Quit</div>
+        </div>
+        <a href="/Local/cn" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-cn'">@Lang.Common.Location_Chinese</a>
+        <a href="/Local/en" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-en'">@Lang.Common.Location_English</a>
+    </div>
+</div>
+<div region="west" data-options="title:'@Lang.Common.Layout_Navigation', split:true,width:205">
+    <div id="menu" class="easyui-accordion bgcolor" data-options="fit:true,border:false,animate:true" style="overflow:hidden;"></div>
+</div>

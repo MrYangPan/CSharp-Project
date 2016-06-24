@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+
+  <object id="BCAreaManagementService" type="Richnova.CEMS.Service.Basic.BCAreaManagementService,Richnova.CEMS.Service.Basic">
+    <property name="Repository" ref="App.Repository"/>
+  </object>
+  <object id="BCIndustryManagementService" type="Richnova.CEMS.Service.Basic.BCIndustryManagementService,Richnova.CEMS.Service.Basic">
+    <property name="Repository" ref="App.Repository"/>
+  </object>
+</objects>

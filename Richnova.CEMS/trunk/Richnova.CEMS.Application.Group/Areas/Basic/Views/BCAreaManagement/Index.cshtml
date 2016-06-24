@@ -1,0 +1,33 @@
+﻿@Scripts.Render("~/Areas/Basic/Models/BCAreaManagement.js")
+<script type="text/javascript">
+    $(function () {
+        area.init(@Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model)));
+        $("#area-div").toggleClass('hidden');
+    })
+</script>
+
+<div id="area-div" class="easyui-layout hidden" data-options="fit:true,border:false">
+    <div data-options="region:'north',split:false,border:false" class="toolbar">
+        <div class="panel-header">
+            <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-create'" onclick="area.doCreate();">@Lang.Common.Btn_Create</a>
+            <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-edit'" onclick="area.doEdit();">@Lang.Common.Btn_Edit</a>
+            <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-delete'" onclick="area.doDelete();">@Lang.Common.Btn_Delete</a>
+            <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-reload'" onclick="area.doReload();">@Lang.Common.Btn_Reload</a>
+        </div>
+    </div>
+    <div class="easyui-layout center" data-options="region:'center',border:false">
+        <table id="area-datagrid" data-options="fit:true">
+            <thead>
+                <tr>
+                    <th data-options="field:'Id',width:100,hidden:true">主键</th>
+                    <th data-options="field:'AreaName',width:100">地区名称</th>
+                    <th data-options="field:'ParentAreaName',width:100">所属地区名称</th>
+                    <th data-options="field:'Level',width:100,hidden:true">等级</th>
+                    <th data-options="field:'Desc',width:100">描述</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+<div id="area-edit" class="easyui-panel"></div>

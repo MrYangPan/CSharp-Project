@@ -1,0 +1,31 @@
+﻿@Scripts.Render("~/Areas/Basic/Models/BCIndustryManagement.js")
+<script type="text/javascript">
+    $(function () {
+        Industry.init(@Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model)));
+        $("#industry-div").toggleClass('hidden');
+    })
+</script>
+
+<div id="industry-div" class="easyui-layout hidden" data-options="fit:true,border:false">
+    <div data-options="region:'north',split:false,border:false" class="toolbar">
+        <div class="panel-header">
+            <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-create'" onclick="Industry.doCreate();">@Lang.Common.Btn_Create</a>
+            <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-edit'" onclick="Industry.doEdit();">@Lang.Common.Btn_Edit</a>
+            <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-delete'" onclick="Industry.doDelete();">@Lang.Common.Btn_Delete</a>
+            <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-reload'" onclick="Industry.doReload();">@Lang.Common.Btn_Reload</a>
+        </div>
+    </div>
+    <div class="easyui-layout center" data-options="region:'center',border:false">
+        <table id="industry-datagrid" data-options="fit:true">
+            <thead>
+                <tr>
+                    <th data-options="field:'IndustryName',width:100">行业名称</th>
+                    <th data-options="field:'IndustryLevel',width:100,hidden:true">等级</th>
+                    <th data-options="field:'IndustryDesc',width:100">描述</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+<div id="industry-edit" class="easyui-panel"></div>

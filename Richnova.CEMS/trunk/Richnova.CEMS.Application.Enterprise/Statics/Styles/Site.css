@@ -1,0 +1,266 @@
+﻿.bgcolor {background: #f9f9f9;}
+.bgTool {background: #efefef;}
+.left {float: left;}
+.right {float: right;}
+.clear {clear: both;}
+.hidden {visibility: hidden;}
+.visible {visibility: visible;}
+
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.app-title {
+    padding-left: 10px;
+    padding-top: 15px;
+    /*background: url(/Images/header-bg.png) repeat-x;*/
+    background-color: #007acc;
+    background-color: #dcf5f6;
+    background: -webkit-linear-gradient(left,#00bbd4 0,#006998 100%);
+    background: -moz-linear-gradient(left,#00bbd4 0,#006998 100%);
+    background: -o-linear-gradient(left,#00bbd4 0,#006998 100%);
+    background: linear-gradient(to right,#00bbd4 0,#006998 100%);
+    background-repeat: repeat-y;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00bbd4,endColorstr=#006998,GradientType=0);
+}
+.app-foot {
+    height: 25px;
+    padding-left: 10px; padding-top: 2px; background-color: #00a7c5;text-align: center;
+}
+.head a {
+    color: White;
+    text-decoration: underline;
+}
+
+.head-right {
+    padding: 2px 2px 0 2px;
+    position: absolute;
+    right: 0;
+    top: 5px;
+}
+
+    .head-right a {
+        color: white;
+    }
+
+.head-left {
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    background: url(/Images/logo.png) no-repeat left;
+    width: 200px;
+    padding-left: 150px;
+    height: 40px;
+}
+
+    .head-left span {
+        color: white;
+        position: absolute;
+        bottom: 8px;
+        font-size: 18px;
+        font-weight: normal;
+        font-family: 'Microsoft YaHei' !important;
+    }
+
+.head-menu {
+    border: 0;
+    margin: 0;
+    padding: 1px 5px 1px 5px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.tip-info {
+    background: #FFFEE6;
+    color: #8F5700;
+    padding: 12px;
+}
+
+.tip-icon {
+    width: 24px;
+    height: 16px;
+    float: left;
+}
+
+.noscript {
+    position: absolute;
+    z-index: 100000;
+    height: 2046px;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background: white;
+    text-align: center;
+}
+
+.ftitle {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 0;
+    margin: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.fitem {
+    margin-bottom: 5px;
+}
+
+    .fitem label {
+        display: inline-block;
+        text-align: right;
+        width: 60px;
+    }
+
+/* 表单样式 */
+form {
+    padding: 20px;
+    padding-top: 10px;
+}
+
+.column1 {
+    width: 250px;
+}
+
+.column2 {
+    width: 500px;
+}
+
+.column3 {
+    width: 750px;
+}
+
+.edit-table,.view-table {
+    line-height: 26px;
+}
+
+.view-table label,
+.edit-table label {
+    width: 90px;
+    display: block;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 12px;
+    color: #006998;
+}
+
+.edit-table input, 
+.edit-table textarea{
+    width: 100%;
+    padding-right: 10px;
+    border: 1px solid #00badd;
+    font-size: 12px;
+    color: #000;
+}
+
+.view-table input,
+.view-table textarea,
+.view-table .combo{
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #00badd;
+    background-color: transparent;
+    font-size: 12px;
+    color: #000;
+}
+
+.view-title {
+    font-size: 14px;
+    color: #f1a851;
+    border-bottom: 1px solid #f1a851;
+    margin: 2px;
+    margin-top: 10px;
+}
+
+.view-title input {
+    width: 100%;
+    border: 0;
+    background-color: transparent;
+}
+
+.view-panel {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+/* accordion-menu */
+.easyui-accordion ul {
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+    .easyui-accordion ul li {
+        cursor: pointer;
+        display: block;
+        height: 30px;
+    }
+
+        .easyui-accordion ul li a {
+            display: block;
+            padding-left: 25px;
+            height: auto;
+        }
+
+            .easyui-accordion ul li a:link {
+                text-decoration: none;
+            }
+
+            .easyui-accordion ul li a:visited {
+                text-decoration: none;
+            }
+
+            .easyui-accordion ul li a:hover {
+                text-decoration: none;
+                font-weight: normal;
+                background: #fbec88;
+            }
+
+            .easyui-accordion ul li a div {
+                width: 20px;
+                height: 20px;
+                margin-top: 5px;
+                margin-right: 5px;
+            }
+
+/* tree */
+.tree-node {
+    height: 25px;
+}
+
+/* layout */
+.easyui-layout .toolbar {
+    padding: 2px;
+    height: auto;
+    overflow: hidden;
+}
+
+    .easyui-layout .toolbar .panel-header {
+        padding: 0;
+        padding-top: 1px;
+    }
+
+.easyui-layout .center {
+    padding: 2px;
+}
+/* search-panel */
+.easyui-searchpanel {
+    height: auto;
+    padding: 20px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+/*tabs工具栏*/
+.tabs-tool {
+}
+/* 关键字搜搜*/
+.keySearch {
+    float: left;
+    padding-top: 3px;
+    margin-left: 2px;
+    margin-right: 2px;
+}

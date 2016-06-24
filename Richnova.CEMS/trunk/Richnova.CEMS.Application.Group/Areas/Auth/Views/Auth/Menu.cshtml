@@ -1,0 +1,35 @@
+﻿@Scripts.Render("~/Areas/Auth/Models/menu.js")
+<script type="text/javascript">
+    $(function () {
+        menu.init(@Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model)));
+        $("#menu-div").toggleClass('hidden');
+    })
+</script>
+
+<div id="menu-div" class="easyui-layout hidden" data-options="fit:true,border:false">
+    <div data-options="region:'north',split:false,border:false" class="toolbar">
+        <div class="panel-header">
+            <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-create'" onclick="menu.doCreate();">@Lang.Common.Btn_Create</a>
+            <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-edit'" onclick="menu.doEdit();">@Lang.Common.Btn_Edit</a>
+            <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-save'" onclick="menu.doSave();">@Lang.Common.Btn_Save</a>
+            <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-delete'" onclick="menu.doDelete();">@Lang.Common.Btn_Delete</a>
+            <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-reload'" onclick="menu.doReload();">@Lang.Common.Btn_Reload</a>
+            <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-arrowUp'" onclick="menu.doMenuUp();">@Lang.Common.Btn_Up</a>
+            <a href="#" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-arrowDown'" onclick="menu.doMenuDown();">@Lang.Common.Btn_Down</a>
+        </div>
+    </div>
+    <div class="easyui-layout center" data-options="region:'center',border:false">
+        <table id="menu-treegrid" data-options="fit:true" >
+            <thead>
+                <tr>
+                    <th data-options="field:'Name',width:150">@Lang.Common.Menu</th>
+                    <th  data-options="field:'Icon',width:30,formatter:formatIcon,align:'center'">@Lang.Common.Menu_Icon</th>
+                    <th data-options="field:'Url',width:200">@Lang.Common.Menu_Url</th>
+                    <th  data-options="field:'IsHidden',width:40,formatter:formatBoolean,align:'center'">@Lang.Common.Menu_Hidden</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+<div id="menu-edit" class="easyui-panel"></div>

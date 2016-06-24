@@ -1,0 +1,72 @@
+﻿@if (LoginHelper.GetUserSettiings().Navigation == "menubutton")
+{
+    <div region="north" data-options="split:false,border:false,height:75" class="app-title">
+        <div class="head head-left">
+            <span>@Resource.Index.Title_Product</span>
+        </div>
+        <div class="head head-right">
+            <a href="javascript:void(0)" class="easyui-menubutton" data-options="menu:'#mm_user',iconCls:'icon-user'">当前用户：<label id="login-user"></label></a>
+            <div id="mm_user" style="width:200px;">
+                <div data-options="iconCls:'icon-rainbow'" class="myconfig">个人设置</div>
+                <div data-options="iconCls:'icon-pwd'" class="changepwd">修改密码</div>
+                <div class="menu-sep"></div>
+                <div data-options="iconCls:'icon-usergo'" class="loginOut">安全退出</div>
+            </div>
+            <a href="/Local/cn" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-cn'">中文</a>
+            <a href="/Local/en" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-en'">English</a>
+        </div>
+        <div class="panel-header head-menu">
+            <div id="wnav"></div>
+        </div>
+    </div>
+}
+else
+{
+    <div region="north" data-options="split:false,border:false,height:75" class="app-title">
+        <div class="head head-left">
+            <span>CEMS</span>
+        </div>
+        <div class="head head-right">
+            <a href="javascript:void(0)" class="easyui-menubutton" data-options="menu:'#mm_user',iconCls:'icon-user'">当前用户：<label id="login-user"></label></a>
+            <div id="mm_user" style="width:200px;">
+                <div data-options="iconCls:'icon-rainbow'" class="myconfig">个人设置</div>
+                <div data-options="iconCls:'icon-pwd'" class="changepwd">修改密码</div>
+                <div class="menu-sep"></div>
+                <div data-options="iconCls:'icon-usergo'" class="loginOut">安全退出</div>
+            </div>
+            <a href="/Local/cn" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-cn'">中文</a>
+            <a href="/Local/en" class="easyui-linkbutton" data-options="plain:true,iconCls:'icon-en'">English</a>
+        </div>
+    </div>
+    <div region="west" data-options="title:'导航', split:true,width:205">
+        <div id="menu" class="easyui-accordion bgcolor" data-options="fit:true,border:false,animate:true" style="overflow:hidden;"></div>
+    </div>
+}
+<div region="south" data-options="split:false,border:false" class="app-foot">
+    <span style="color:#ffffff;font-size: 12px;margin: auto"></span>
+</div>
+
+<div region="center" style="overflow: hidden;">
+    <div id="center-tabs" class="easyui-tabs" data-options="fit:true,border:false,plain:false">
+        <div title="我的桌面" href="" name="main" />
+    </div>
+</div>
+
+<script type="text/html" id="password-template">
+    <div class="container_12" style="width:90%;margin:5%;">
+        <div class="grid_3 lbl">登陆名：</div>
+        <div class="grid_9 val"><input type="text" class="z-txt readonly " name="UserCode" value="@LoginHelper.GetCurrentUser().User" disabled="disabled" /></div>
+        <div class="grid_3 lbl">原密码：</div>
+        <div class="grid_9 val"><input type="password" class="z-txt" name="PasswordOld" /></div>
+        <div class="grid_3 lbl">新密码：</div>
+        <div class="grid_9 val"><input type="password" class="z-txt" name="PasswordNew1" /></div>
+        <div class="grid_3 lbl">确　认：</div>
+        <div class="grid_9 val"><input type="password" class="z-txt" name="PasswordNew2" /></div>
+        <div class="clear"></div>
+    </div>
+
+    <div style="text-align:center;" class="z-toolbar-dialog">
+        <a class="easyui-linkbutton" data-options="iconCls:'icon-ok'" href="javascript:void(0)" id="pwd_confirm">确定</a>
+        <a class="easyui-linkbutton" data-options="iconCls:'icon-cancel'" href="javascript:void(0)" id="pwd_close">取消</a>
+    </div>
+</script>
